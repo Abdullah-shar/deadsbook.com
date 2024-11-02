@@ -1,0 +1,529 @@
+body{
+    background: #F0F2F5;
+
+}
+      
+      /* Main content section */
+        main {
+            flex-grow: 1;
+            /* Make the main content grow and take space */
+            padding: 20px;
+        }
+
+        /* Dashboard content box */
+        .dashboard-content {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Lower opacity for subtle effect */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+        }
+
+        .dashboard-content h2,
+        p,
+        h3 {
+            color: white;
+            /* Light, subtle background for text/cards */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* Sticky footer */
+        .footer{
+            background-color: transparent;
+            /* Remove background color */
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+            color: white;
+            /* Ensure footer sticks to the bottom */
+        }
+        .footer p{
+            color: white;
+        }
+        /* Navbar styles */
+        .navbar {
+            position: static;
+            /* Ensure the navbar is at the top and not centered */
+            z-index: 2;
+            /* Keep it above the background */
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Optional background for navbar */
+            width: 100%;
+        }
+
+        /* Ensure full-width navbar and prevent it from shrinking */
+        .navbar .container-fluid {
+            width: 100%;
+            flex-wrap: nowrap;
+            /* Prevent it from shrinking */
+        }
+
+        .card-img-top {
+            width: 100%;
+            /* Ensures the image spans the full width of the card */
+            height: 250px;
+            /* Sets a fixed height */
+            object-fit: cover;
+            /* Ensures the image covers the area without stretching */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+.card {
+    border-radius: 15px; /* Rounded corners for the card */
+    opacity: 0.9; /* Slightly transparent */
+   margin: auto;
+    max-width: 600px;
+}
+
+.card h2,p {
+    color:black; /* White color for the title */
+}
+
+.btn-primary {
+    background-color: #49a09d; /* Customize button color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #5f2c82; /* Darker shade on hover */
+}
+
+.form-control {
+    border-radius: 10px; /* Rounded corners for input fields */
+}
+
+.alert {
+    margin-top: 15px; /* Space above alert messages */
+}
+/*
+.dashboard-background {
+     background-image: url('assets/images/coffin-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(8px); 
+
+}*/
+
+/* Comment Box Styling */
+.comment-box {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 8px;
+    background-color: #f1f2f6;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.comment-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-content {
+    background-color: #e4e6eb;
+    padding: 8px 10px;
+    border-radius: 18px;
+    max-width: 80%;
+}
+
+.comment-content strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.comment-content p {
+    margin-left: -5px;
+    margin-top: -10px;
+    font-size: 0.9rem;
+    color: #050505;
+}
+
+.comment-time {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-right: 20px;
+    margin-top: -10px;
+    /* Add space between time and like/reply */
+    display: inline-block;
+    /* Display time inline */
+}
+
+.like-reply {
+    font-size: 0.9rem;
+    color: #4267B2;
+    margin-top: -20px;
+    display: inline-block;
+    /* Display like/reply inline */
+}
+
+.like-reply span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Wrapping container to ensure everything is on one line */
+.comment-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.add-comment-box textarea {
+    border-radius: 10px;
+    resize: none;
+}
+
+.card-text {
+    margin-left: -10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 120px; /* Smaller size for mobile */
+    }
+}
+
+/* Responsive styles for dashboard */
+@media (max-width: 1200px) {
+    .dashboard-content {
+        padding: 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        
+    }
+
+    .card-img-top {
+        height: auto; /* Allow images to be flexible */
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-content h2,
+    .dashboard-content h3 {
+        font-size: 1.5rem; /* Decrease font size for smaller screens */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full-width */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .card {
+        flex: 1 0 100%; /* Stack cards on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 120px; /* Smaller size for mobile */
+    }
+
+    .dashboard-content h2,
+    .dashboard-content h3 {
+        font-size: 1.25rem; /* Further decrease font size */
+    }
+
+    .comment-box {
+        flex-direction: column; /* Stack comment box elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .comment-content {
+        max-width: 100%; /* Allow comment content to take full width */
+    }
+}
+.pinned {
+    border-left: 5px solid gold;
+    background-color: #fdf8e4;
+}
+
+
+@media (max-width: 576px) {
+    .dashboard-content {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+.post-box {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 5px auto;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-input {
+    flex-grow: 1;
+    border: none;
+    padding: 8px;
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.post-input::placeholder {
+    color: #737373;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.post-action img {
+    width: 25px;
+    height: 25px;
+   
+    
+}
+
+.post-action span {
+    color: #606770;
+    font-size: 14px;
+}
+
+.post-action:hover {
+    background-color: #f0f2f5;
+}
+
+.post-action:nth-child(2) span {
+    color: #f3425f;
+}
+
+.post-action:nth-child(1) span {
+    color: #42b72a;
+}
+
+.post-action:nth-child(3) span {
+    color: #f02849;
+}
+
+/* Modal Overlay */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.custom-modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  
+}
+
+.custom-profile-section {
+    display: flex;
+    align-items: center;
+}
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+  
+    
+    
+}
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.modal-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.custom-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.custom-profile-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.custom-privacy {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.custom-close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    float:right;
+}
+
+/* Post Input Area */
+.custom-post-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    min-height: 80px;
+}
+
+.tag-icon{
+    float: right;
+    height: 20px; /* Adjust size as needed */
+    margin-left: 30px; /* Add space between the text and icon */
+    margin-top:3px;
+    cursor: pointer;
+}
+/* Add to Post Options */
+.custom-add-post {
+    margin-top: 15px;
+    padding: 10px 0;
+    border: 1px solid#ced0d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-width: 1px;
+    padding: 8px;
+    border-radius: 8px;
+    color: #050505;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-add-post span {
+    font-size: 0.9rem;
+    color:black;
+    cursor: pointer;
+}
+
+.custom-icons img {
+   width: 25px;
+   height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Footer and Post Button */
+.custom-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.custom-post-btn {
+    padding: 8px 16px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+
+}
+.custom-post-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.image-preview-container {
+    display: flex;
+    overflow-x: auto; /* Horizontal scrolling */
+    max-width: 100%; /* Adjust as necessary */
+    padding: 10px 0; /* Add some padding */
+    position: relative;
+    display: inline-block;
+    
+   
+}
+
+.image-preview-container img {
+    max-width: 100px; /* Set max width for each image */
+    max-height: 100px; /* Set max height for each image */
+    margin-right: 10px; /* Space between images */
+    border-radius: 5px; /* Optional: round the corners */
+}
+.hidden {
+    display: none;
+  }
+
+
+  #optionsSelect option {
+    display: block;
+}
